@@ -1,6 +1,17 @@
 # ahh Template
 
-Full-stack web application with a React frontend, Express backend, SQLite database, JWT authentication, and admin controls. Everything you need to get started with user management and settings.
+Full-stack web application with a React frontend, Express backend, SQLite database, JWT authentication, and admin controls. Everything you need to get started with user management and settings. 
+
+# To do
+- Add (insert/edit/delete) to Admin Panel (Now short for AP)
+- Add websockets
+    - Users Online to AP
+- Add a chatbox (messages with websocks)
+    - Look at chat convos in AP
+- Add posts (Twitter style posts on homepage)
+- Ability to ban users without deleting
+- Log IP and as much as info about users to DB (After everything else is done)
+- Analytics to AP (I love analytics)
 
 ---
 
