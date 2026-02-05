@@ -1,11 +1,13 @@
 // src/pages/Home.jsx
 import React from "react";
+import Posts from "../components/Posts/Posts.jsx";
+import CreatePost from "../components/Posts/CreatePost.jsx";
 
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <p>This is the home page.</p>
+      <CreatePost />
+      <Posts />
     </div>
   );
 }

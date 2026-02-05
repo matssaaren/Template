@@ -2,7 +2,10 @@ import db from "../db.js";
 
 
 export function list() {
-  return db("posts").select("*");
+  return db("posts")
+    .select("posts.*", "users.name as author_name")
+    .leftJoin("users", "posts.author_id", "users.id")
+    .orderBy("posts.created_at", "desc");
 }
 
 export function getById(id) {
