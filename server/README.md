@@ -9,7 +9,7 @@ Backend base with working database, routes, controllers, auth and few migrations
 ## Useful locations
 `./db` - Database related stuff
 `./controllers` - API Controllers (API logic)
-`./models` - API Models (API commands `/getByEmail`)
+`./models` - API Models (Used for DB requests for controllers)
 `./routes` - API Routes (API url routes `api/users`)
 `./middlewave` - API Middleware (Error handleing and auth, auth is more important)
 
