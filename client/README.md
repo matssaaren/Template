@@ -8,6 +8,7 @@ Frontend simple base with basic fetch, few pages, working routes and imported ta
 `./Pages` - All Pages
 `./main.jsx` - Router handler (If new page, refrence it here)
 `./App.jsx` - App Layout (Only Header and Footer)
+`./config` - Used for API URL
 ## Useful commands
 `npm run dev`
 

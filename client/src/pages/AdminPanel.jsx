@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { apiFetch } from "../lib/auth.js";
+import { API_URL } from "../config";
 
 function TableView({ rows }) {
   const columns = useMemo(() => {
@@ -49,7 +50,7 @@ export default function AdminPanel() {
       setErr("");
       setLoadingTables(true);
       try {
-        const res = await apiFetch("http://localhost:5000/api/admin/tables");
+        const res = await apiFetch(`${API_URL}/api/admin/tables`);
         if (!res.ok) throw new Error(`Failed to load tables (${res.status})`);
         const data = await res.json();
         setTables(data.tables || []);
@@ -69,7 +70,7 @@ export default function AdminPanel() {
       setErr("");
       setLoadingRows(true);
       try {
-        const res = await apiFetch(`http://localhost:5000/api/admin/tables/${encodeURIComponent(selected)}`);
+        const res = await apiFetch(`${API_URL}/api/admin/tables/${encodeURIComponent(selected)}`);
         if (!res.ok) throw new Error(`Failed to load table (${res.status})`);
         const data = await res.json();
         setRows(data.rows || []);

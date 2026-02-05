@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { apiFetch, clearToken, getToken, setToken } from "../lib/auth.js";
-
+import { API_URL } from "../config.js";
 const AuthCtx = createContext(null);
 
 export function useAuth() {
@@ -21,7 +21,7 @@ export default function AuthProvider({ children }) {
 
     setLoading(true);
     try {
-      const res = await apiFetch("http://localhost:5000/api/auth/me");
+      const res = await apiFetch(`${API_URL}/api/auth/me`);
       if (!res.ok) {
         clearToken();
         setMe(null);
